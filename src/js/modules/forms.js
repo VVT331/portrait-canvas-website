@@ -1,4 +1,4 @@
-const forms = () => {
+const forms = (objData) => {
     const forms = document.querySelectorAll('form'),
         uploads = document.querySelectorAll('[name=upload]');
 
@@ -43,9 +43,13 @@ const forms = () => {
             isFile ? server = urlServers.file : server = urlServers.question;
             const data = isFile ? new FormData(form) : Object.fromEntries(new FormData(form));
 
-            const results = await postData(server, data, status, statusImg, statusText, isFile, form);
-            console.log(results);
+            if (form.hasAttribute('data-calc-form')) {
+                for (let key in objData) {
+                    data.append(key, objData[key]);
+                }
+            }
 
+            const result = await postData(server, data, status, statusImg, statusText, isFile, form);
         });
     });
 
@@ -53,7 +57,6 @@ const forms = () => {
         upload.addEventListener('input', () => {
 
             const file = upload.files[0];
-            console.log(file);
 
             upload.previousElementSibling.textContent = `${truncationName(file.name)}`;
         });
