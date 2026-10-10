@@ -8,6 +8,7 @@ import checkText from "./modules/checkTextInputs";
 import showContent from "./modules/showMoreContent";
 import calc from "./modules/calc";
 import filter from "./modules/filter";
+import image from "./modules/image";
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -23,4 +24,5 @@ document.addEventListener('DOMContentLoaded', () => {
     checkText('[name="message"]');
     showContent('.button-styles', '#styles .row');
     filter();
+    image('.sizes-block');
 });
