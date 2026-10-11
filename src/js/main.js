@@ -9,6 +9,8 @@ import showContent from "./modules/showMoreContent";
 import calc from "./modules/calc";
 import filter from "./modules/filter";
 import image from "./modules/image";
+import accordion from "./modules/accordion";
+import burger from "./modules/burger";
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -25,4 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
     showContent('.button-styles', '#styles .row');
     filter();
     image('.sizes-block');
+    accordion('.accordion-heading', '.accordion-block');
+    burger('.burger-menu', '.burger');
 });
