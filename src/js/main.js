@@ -11,6 +11,8 @@ import filter from "./modules/filter";
 import image from "./modules/image";
 import accordion from "./modules/accordion";
 import burger from "./modules/burger";
+import scroll from "./modules/scrolling";
+import drop from "./modules/drop";
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -29,4 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
     image('.sizes-block');
     accordion('.accordion-heading', '.accordion-block');
     burger('.burger-menu', '.burger');
+    scroll('.pageup');
+    drop();
 });

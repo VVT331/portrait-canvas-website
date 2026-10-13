@@ -2109,3 +2109,35 @@ h4 {
     width: 25rem;
   }
 }
+
+.pageup {
+  opacity: 0;
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  bottom: 100px;
+  right: 5%;
+  z-index: 30;
+  background-color: #c51abb;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(197, 26, 187, 0.3);
+  padding: 8px;
+}
+
+.pageup svg {
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  padding: 2px;
+}
+
+.pageup svg path {
+  fill: #c51abb;
+}
